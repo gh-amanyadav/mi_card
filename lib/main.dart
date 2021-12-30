@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/ConnecteO.png'),
               ),
-              Text(
+              const Text(
                 'Aman Yadav',
                 style: TextStyle(
                     fontFamily: 'MoonDance',
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
                     color: Colors.white,
                     fontWeight: FontWeight.bold),
               ),
-              Text(
+              const Text(
                 'FLUTTER DEVELOPER',
                 style: TextStyle(
                     fontFamily: 'SourceSansPro',
@@ -37,43 +38,44 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 2.5,
                     fontWeight: FontWeight.bold),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
+               SizedBox(height: 20.0, width: 250,
+               child: Divider(
+                 color: Colors.teal.shade100,
+               ),),
+               Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child: Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: ListTile(
+                    leading: const Icon(
                       Icons.phone,
                       color: Colors.teal,
                     ),
-                    SizedBox(width: 10.0,),
-                    Text(
+                    title: Text(
                       '+91 73239 39445',
                       style: TextStyle(
                           color: Colors.teal.shade900, fontFamily: 'SourceSansPro' ,fontSize: 20.0),
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               ),
-              Container(
-
-                padding: EdgeInsets.all(10.0),
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child: Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: ListTile(
+                    leading: const Icon(
                       Icons.email,
                       color: Colors.teal,
                     ),
-                    SizedBox(width: 10.0,),
-                    Text(
+                    title: Text(
                       'amankumar99347@gmail.com',
                       style: TextStyle(
                           color: Colors.teal.shade900, fontFamily: 'SourceSansPro' ,fontSize: 20.0),
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               )
             ],
